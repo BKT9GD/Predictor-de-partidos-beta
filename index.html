@@ -1,13 +1,72 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <title>Predictor de partidos</title>
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Predictor de partidos 2.0</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+
+    <dialog id="winnerDialog" style="color: white;">
+      <div style="padding-left: 5px;"><h1>¡El ganador es!</h1></div>
+      <div class="spaceH"></div>
+      <div style="display: flex; justify-content: center; align-items: center;"><h2 id="winnerTeam">Equipo</h2></div>
+      <div style="display: flex; justify-content: center; padding-top: 100px;">
+        <button id="closeDialog">Cerrar</button>
+      </div>
+    </dialog>
+
+
+    <h1 style="display: flex; justify-content: center; color: #f25555; text-align: center;">
+      Predictor de partidos 2.0
+    </h1>
+    <div class="spaceH"></div>
+    <div id="container">
+      <div id="sub-container">
+        <h2>Equipo 1</h2>
+        <label for="team1Name">Nombre:</label>
+        <input type="text" id="team1Name" placeholder="Nombre:"> <br>
+
+        <label for="team1Wins">Victorias:</label>
+        <input type="range" id="team1Wins" min="0" max="5" value="0"> 
+        <span id="team1WinsCounter">0/5</span><br>
+
+        <label for="team1Draws">Empates:</label>
+        <input type="range" id="team1Draws" min="0" max="5" value="0">
+        <span id="team1DrawsCounter">0/5</span><br>
+
+        <label for="team1Loses">Derrotas:</label>
+        <input type="range" id="team1Loses" min="0" max="5" value="0">
+        <span id="team1LosesCounter">0/5</span><br>
+
+        <h2>Equipo 2</h2>
+        <label for="team2Name">Nombre:</label>
+        <input type="text" id="team2Name" placeholder="Nombre:"> <br>
+
+        <label for="team2Wins">Victorias:</label>
+        <input type="range" id="team2Wins" min="0" max="5" value="0">
+        <span id="team2WinsCounter">0/5</span><br>
+
+        <label for="team2Draws">Empates:</label>
+        <input type="range" id="team2Draws" min="0" max="5" value="0">
+        <span id="team2DrawsCounter">0/5</span><br>
+
+        <label for="team2Loses">Derrotas:</label>
+        <input type="range" id="team2Loses" min="0" max="5" value="0">
+        <span id="team2LosesCounter">0/5</span><br>
+
+        <div class="spaceH"></div>
+        <div style="display: flex; justify-content: center; padding-right: 20px;">
+          <button id="submit">¡Predecir!</button>
+        </div>
+        <div class="spaceH"></div>
+        <div style="display: flex; justify-content: center; padding-right: 20px;">
+          <button id="reset">Restablecer</button>
+        </div>
+      </div>
+    </div>
+    <h3 class="only-phone">Si estas en telefono, <strong>preferiblemente rota tu celular en horizontal para mejor experiencia</strong></h3>
     <script src="main.js"></script>
-</head>
-<body>
-    <center><h1>Predictor de partidos</h1></center>
-    <center><button id="predecir" onclick="predecir()">Elegir Partido</button></center>
-</body>
+  </body>
 </html>
